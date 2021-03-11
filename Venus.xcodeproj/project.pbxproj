@@ -1,0 +1,913 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		791766BF25F9B536004E662B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791766BE25F9B536004E662B /* AppDelegate.swift */; };
+		791766C125F9B536004E662B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791766C025F9B536004E662B /* SceneDelegate.swift */; };
+		791766C325F9B536004E662B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791766C225F9B536004E662B /* ContentView.swift */; };
+		791766C525F9B537004E662B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 791766C425F9B537004E662B /* Assets.xcassets */; };
+		791766C825F9B537004E662B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 791766C725F9B537004E662B /* Preview Assets.xcassets */; };
+		791766CB25F9B537004E662B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 791766C925F9B537004E662B /* LaunchScreen.storyboard */; };
+		791766D625F9B537004E662B /* VenusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791766D525F9B537004E662B /* VenusTests.swift */; };
+		791766E125F9B537004E662B /* VenusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791766E025F9B537004E662B /* VenusUITests.swift */; };
+		791766E625F9B537004E662B /* Venus WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 791766E525F9B537004E662B /* Venus WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		791766EC25F9B537004E662B /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 791766EA25F9B537004E662B /* Interface.storyboard */; };
+		791766EE25F9B537004E662B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 791766ED25F9B537004E662B /* Assets.xcassets */; };
+		791766F525F9B537004E662B /* Venus WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 791766F425F9B537004E662B /* Venus WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		791766FA25F9B537004E662B /* HostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791766F925F9B537004E662B /* HostingController.swift */; };
+		791766FC25F9B537004E662B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791766FB25F9B537004E662B /* ContentView.swift */; };
+		791766FE25F9B537004E662B /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791766FD25F9B537004E662B /* ExtensionDelegate.swift */; };
+		7917670025F9B537004E662B /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791766FF25F9B537004E662B /* NotificationController.swift */; };
+		7917670225F9B537004E662B /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7917670125F9B537004E662B /* NotificationView.swift */; };
+		7917670425F9B537004E662B /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7917670325F9B537004E662B /* ComplicationController.swift */; };
+		7917670625F9B538004E662B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7917670525F9B538004E662B /* Assets.xcassets */; };
+		7917670925F9B538004E662B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7917670825F9B538004E662B /* Preview Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		791766D225F9B537004E662B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 791766B325F9B536004E662B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 791766BA25F9B536004E662B;
+			remoteInfo = Venus;
+		};
+		791766DD25F9B537004E662B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 791766B325F9B536004E662B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 791766BA25F9B536004E662B;
+			remoteInfo = Venus;
+		};
+		791766E725F9B537004E662B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 791766B325F9B536004E662B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 791766E425F9B537004E662B;
+			remoteInfo = "Venus WatchKit App";
+		};
+		791766F625F9B537004E662B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 791766B325F9B536004E662B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 791766F325F9B537004E662B;
+			remoteInfo = "Venus WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		7917671125F9B538004E662B /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				791766F525F9B537004E662B /* Venus WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7917671525F9B538004E662B /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				791766E625F9B537004E662B /* Venus WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		791766BB25F9B536004E662B /* Venus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Venus.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		791766BE25F9B536004E662B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		791766C025F9B536004E662B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		791766C225F9B536004E662B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		791766C425F9B537004E662B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		791766C725F9B537004E662B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		791766CA25F9B537004E662B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		791766CC25F9B537004E662B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		791766D125F9B537004E662B /* VenusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VenusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		791766D525F9B537004E662B /* VenusTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenusTests.swift; sourceTree = "<group>"; };
+		791766D725F9B537004E662B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		791766DC25F9B537004E662B /* VenusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VenusUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		791766E025F9B537004E662B /* VenusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenusUITests.swift; sourceTree = "<group>"; };
+		791766E225F9B537004E662B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		791766E525F9B537004E662B /* Venus WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Venus WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		791766EB25F9B537004E662B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		791766ED25F9B537004E662B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		791766EF25F9B537004E662B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		791766F425F9B537004E662B /* Venus WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Venus WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		791766F925F9B537004E662B /* HostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingController.swift; sourceTree = "<group>"; };
+		791766FB25F9B537004E662B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		791766FD25F9B537004E662B /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		791766FF25F9B537004E662B /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		7917670125F9B537004E662B /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		7917670325F9B537004E662B /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		7917670525F9B538004E662B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7917670825F9B538004E662B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7917670A25F9B538004E662B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7917670B25F9B538004E662B /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		791766B825F9B536004E662B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		791766CE25F9B537004E662B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		791766D925F9B537004E662B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		791766F125F9B537004E662B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		791766B225F9B536004E662B = {
+			isa = PBXGroup;
+			children = (
+				791766BD25F9B536004E662B /* Venus */,
+				791766D425F9B537004E662B /* VenusTests */,
+				791766DF25F9B537004E662B /* VenusUITests */,
+				791766E925F9B537004E662B /* Venus WatchKit App */,
+				791766F825F9B537004E662B /* Venus WatchKit Extension */,
+				791766BC25F9B536004E662B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		791766BC25F9B536004E662B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				791766BB25F9B536004E662B /* Venus.app */,
+				791766D125F9B537004E662B /* VenusTests.xctest */,
+				791766DC25F9B537004E662B /* VenusUITests.xctest */,
+				791766E525F9B537004E662B /* Venus WatchKit App.app */,
+				791766F425F9B537004E662B /* Venus WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		791766BD25F9B536004E662B /* Venus */ = {
+			isa = PBXGroup;
+			children = (
+				791766BE25F9B536004E662B /* AppDelegate.swift */,
+				791766C025F9B536004E662B /* SceneDelegate.swift */,
+				791766C225F9B536004E662B /* ContentView.swift */,
+				791766C425F9B537004E662B /* Assets.xcassets */,
+				791766C925F9B537004E662B /* LaunchScreen.storyboard */,
+				791766CC25F9B537004E662B /* Info.plist */,
+				791766C625F9B537004E662B /* Preview Content */,
+			);
+			path = Venus;
+			sourceTree = "<group>";
+		};
+		791766C625F9B537004E662B /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				791766C725F9B537004E662B /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		791766D425F9B537004E662B /* VenusTests */ = {
+			isa = PBXGroup;
+			children = (
+				791766D525F9B537004E662B /* VenusTests.swift */,
+				791766D725F9B537004E662B /* Info.plist */,
+			);
+			path = VenusTests;
+			sourceTree = "<group>";
+		};
+		791766DF25F9B537004E662B /* VenusUITests */ = {
+			isa = PBXGroup;
+			children = (
+				791766E025F9B537004E662B /* VenusUITests.swift */,
+				791766E225F9B537004E662B /* Info.plist */,
+			);
+			path = VenusUITests;
+			sourceTree = "<group>";
+		};
+		791766E925F9B537004E662B /* Venus WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				791766EA25F9B537004E662B /* Interface.storyboard */,
+				791766ED25F9B537004E662B /* Assets.xcassets */,
+				791766EF25F9B537004E662B /* Info.plist */,
+			);
+			path = "Venus WatchKit App";
+			sourceTree = "<group>";
+		};
+		791766F825F9B537004E662B /* Venus WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				791766F925F9B537004E662B /* HostingController.swift */,
+				791766FB25F9B537004E662B /* ContentView.swift */,
+				791766FD25F9B537004E662B /* ExtensionDelegate.swift */,
+				791766FF25F9B537004E662B /* NotificationController.swift */,
+				7917670125F9B537004E662B /* NotificationView.swift */,
+				7917670325F9B537004E662B /* ComplicationController.swift */,
+				7917670525F9B538004E662B /* Assets.xcassets */,
+				7917670A25F9B538004E662B /* Info.plist */,
+				7917670B25F9B538004E662B /* PushNotificationPayload.apns */,
+				7917670725F9B538004E662B /* Preview Content */,
+			);
+			path = "Venus WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		7917670725F9B538004E662B /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				7917670825F9B538004E662B /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		791766BA25F9B536004E662B /* Venus */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7917671625F9B538004E662B /* Build configuration list for PBXNativeTarget "Venus" */;
+			buildPhases = (
+				791766B725F9B536004E662B /* Sources */,
+				791766B825F9B536004E662B /* Frameworks */,
+				791766B925F9B536004E662B /* Resources */,
+				7917671525F9B538004E662B /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				791766E825F9B537004E662B /* PBXTargetDependency */,
+			);
+			name = Venus;
+			productName = Venus;
+			productReference = 791766BB25F9B536004E662B /* Venus.app */;
+			productType = "com.apple.product-type.application";
+		};
+		791766D025F9B537004E662B /* VenusTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7917671925F9B538004E662B /* Build configuration list for PBXNativeTarget "VenusTests" */;
+			buildPhases = (
+				791766CD25F9B537004E662B /* Sources */,
+				791766CE25F9B537004E662B /* Frameworks */,
+				791766CF25F9B537004E662B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				791766D325F9B537004E662B /* PBXTargetDependency */,
+			);
+			name = VenusTests;
+			productName = VenusTests;
+			productReference = 791766D125F9B537004E662B /* VenusTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		791766DB25F9B537004E662B /* VenusUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7917671C25F9B538004E662B /* Build configuration list for PBXNativeTarget "VenusUITests" */;
+			buildPhases = (
+				791766D825F9B537004E662B /* Sources */,
+				791766D925F9B537004E662B /* Frameworks */,
+				791766DA25F9B537004E662B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				791766DE25F9B537004E662B /* PBXTargetDependency */,
+			);
+			name = VenusUITests;
+			productName = VenusUITests;
+			productReference = 791766DC25F9B537004E662B /* VenusUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		791766E425F9B537004E662B /* Venus WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7917671225F9B538004E662B /* Build configuration list for PBXNativeTarget "Venus WatchKit App" */;
+			buildPhases = (
+				791766E325F9B537004E662B /* Resources */,
+				7917671125F9B538004E662B /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				791766F725F9B537004E662B /* PBXTargetDependency */,
+			);
+			name = "Venus WatchKit App";
+			productName = "Venus WatchKit App";
+			productReference = 791766E525F9B537004E662B /* Venus WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		791766F325F9B537004E662B /* Venus WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7917670E25F9B538004E662B /* Build configuration list for PBXNativeTarget "Venus WatchKit Extension" */;
+			buildPhases = (
+				791766F025F9B537004E662B /* Sources */,
+				791766F125F9B537004E662B /* Frameworks */,
+				791766F225F9B537004E662B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Venus WatchKit Extension";
+			productName = "Venus WatchKit Extension";
+			productReference = 791766F425F9B537004E662B /* Venus WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		791766B325F9B536004E662B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					791766BA25F9B536004E662B = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					791766D025F9B537004E662B = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 791766BA25F9B536004E662B;
+					};
+					791766DB25F9B537004E662B = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 791766BA25F9B536004E662B;
+					};
+					791766E425F9B537004E662B = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					791766F325F9B537004E662B = {
+						CreatedOnToolsVersion = 12.4;
+					};
+				};
+			};
+			buildConfigurationList = 791766B625F9B536004E662B /* Build configuration list for PBXProject "Venus" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 791766B225F9B536004E662B;
+			productRefGroup = 791766BC25F9B536004E662B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				791766BA25F9B536004E662B /* Venus */,
+				791766D025F9B537004E662B /* VenusTests */,
+				791766DB25F9B537004E662B /* VenusUITests */,
+				791766E425F9B537004E662B /* Venus WatchKit App */,
+				791766F325F9B537004E662B /* Venus WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		791766B925F9B536004E662B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				791766CB25F9B537004E662B /* LaunchScreen.storyboard in Resources */,
+				791766C825F9B537004E662B /* Preview Assets.xcassets in Resources */,
+				791766C525F9B537004E662B /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		791766CF25F9B537004E662B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		791766DA25F9B537004E662B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		791766E325F9B537004E662B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				791766EE25F9B537004E662B /* Assets.xcassets in Resources */,
+				791766EC25F9B537004E662B /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		791766F225F9B537004E662B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7917670925F9B538004E662B /* Preview Assets.xcassets in Resources */,
+				7917670625F9B538004E662B /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		791766B725F9B536004E662B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				791766BF25F9B536004E662B /* AppDelegate.swift in Sources */,
+				791766C125F9B536004E662B /* SceneDelegate.swift in Sources */,
+				791766C325F9B536004E662B /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		791766CD25F9B537004E662B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				791766D625F9B537004E662B /* VenusTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		791766D825F9B537004E662B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				791766E125F9B537004E662B /* VenusUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		791766F025F9B537004E662B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				791766FC25F9B537004E662B /* ContentView.swift in Sources */,
+				791766FA25F9B537004E662B /* HostingController.swift in Sources */,
+				7917670025F9B537004E662B /* NotificationController.swift in Sources */,
+				791766FE25F9B537004E662B /* ExtensionDelegate.swift in Sources */,
+				7917670225F9B537004E662B /* NotificationView.swift in Sources */,
+				7917670425F9B537004E662B /* ComplicationController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		791766D325F9B537004E662B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 791766BA25F9B536004E662B /* Venus */;
+			targetProxy = 791766D225F9B537004E662B /* PBXContainerItemProxy */;
+		};
+		791766DE25F9B537004E662B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 791766BA25F9B536004E662B /* Venus */;
+			targetProxy = 791766DD25F9B537004E662B /* PBXContainerItemProxy */;
+		};
+		791766E825F9B537004E662B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 791766E425F9B537004E662B /* Venus WatchKit App */;
+			targetProxy = 791766E725F9B537004E662B /* PBXContainerItemProxy */;
+		};
+		791766F725F9B537004E662B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 791766F325F9B537004E662B /* Venus WatchKit Extension */;
+			targetProxy = 791766F625F9B537004E662B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		791766C925F9B537004E662B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				791766CA25F9B537004E662B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		791766EA25F9B537004E662B /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				791766EB25F9B537004E662B /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7917670C25F9B538004E662B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7917670D25F9B538004E662B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		7917670F25F9B538004E662B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Venus WatchKit Extension/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Venus WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = SYC.Venus.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.2;
+			};
+			name = Debug;
+		};
+		7917671025F9B538004E662B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Venus WatchKit Extension/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Venus WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = SYC.Venus.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 7.2;
+			};
+			name = Release;
+		};
+		7917671325F9B538004E662B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				IBSC_MODULE = Venus_WatchKit_Extension;
+				INFOPLIST_FILE = "Venus WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = SYC.Venus.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.2;
+			};
+			name = Debug;
+		};
+		7917671425F9B538004E662B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				IBSC_MODULE = Venus_WatchKit_Extension;
+				INFOPLIST_FILE = "Venus WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = SYC.Venus.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 7.2;
+			};
+			name = Release;
+		};
+		7917671725F9B538004E662B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Venus/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Venus/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = SYC.Venus;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7917671825F9B538004E662B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Venus/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Venus/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = SYC.Venus;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7917671A25F9B538004E662B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = VenusTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = SYC.VenusTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Venus.app/Venus";
+			};
+			name = Debug;
+		};
+		7917671B25F9B538004E662B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = VenusTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = SYC.VenusTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Venus.app/Venus";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7917671D25F9B538004E662B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = VenusUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = SYC.VenusUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Venus;
+			};
+			name = Debug;
+		};
+		7917671E25F9B538004E662B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = VenusUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = SYC.VenusUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Venus;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		791766B625F9B536004E662B /* Build configuration list for PBXProject "Venus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7917670C25F9B538004E662B /* Debug */,
+				7917670D25F9B538004E662B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7917670E25F9B538004E662B /* Build configuration list for PBXNativeTarget "Venus WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7917670F25F9B538004E662B /* Debug */,
+				7917671025F9B538004E662B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7917671225F9B538004E662B /* Build configuration list for PBXNativeTarget "Venus WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7917671325F9B538004E662B /* Debug */,
+				7917671425F9B538004E662B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7917671625F9B538004E662B /* Build configuration list for PBXNativeTarget "Venus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7917671725F9B538004E662B /* Debug */,
+				7917671825F9B538004E662B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7917671925F9B538004E662B /* Build configuration list for PBXNativeTarget "VenusTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7917671A25F9B538004E662B /* Debug */,
+				7917671B25F9B538004E662B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7917671C25F9B538004E662B /* Build configuration list for PBXNativeTarget "VenusUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7917671D25F9B538004E662B /* Debug */,
+				7917671E25F9B538004E662B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 791766B325F9B536004E662B /* Project object */;
+}
