@@ -11,15 +11,16 @@ struct ContentView: View {
     @EnvironmentObject var healthManager: HealthManager
     
     var body: some View {
-        List {
-            ForEach(["有氧", "无氧"], id: \.self) { (value) in
-                
-                Button(action: {
-                    print("\(value) tapped")
-                }, label: {
-                    Text(value)
-                })
+        NavigationView {
+            List(["有氧", "无氧"], id: \.self) { item in
+                NavigationLink(
+                    destination: Text("Destination")) {
+                    VStack {
+                        Text(item)
+                    }
+                }
             }
+            .navigationTitle("运动类型")
         }
     }
 }
