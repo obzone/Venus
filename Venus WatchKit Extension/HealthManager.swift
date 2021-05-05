@@ -18,6 +18,8 @@ class HealthManager: NSObject, ObservableObject {
     var session: HKWorkoutSession?
     var builder: HKLiveWorkoutBuilder?
     
+    @Published var heartRate: Int?
+    
     override init() {
         if HKHealthStore.isHealthDataAvailable() {
             healthStore = HKHealthStore()
@@ -68,6 +70,52 @@ class HealthManager: NSObject, ObservableObject {
         } catch {
             return
         }
+    }
+    
+    func stopSession() -> Void {
+        session?.end()
+        builder?.endCollection(withEnd: Date()) { (success, error) in
+            
+            guard success else {
+                // TODO Handle errors.
+                return
+            }
+            
+            self.builder?.finishWorkout { (workout, error) in
+                
+                guard workout != nil else {
+                    // TODO Handle errors.
+                    return
+                }
+                
+                DispatchQueue.main.async() {
+                    // Update the user interface.
+                }
+            }
+        }
+    }
+    
+    func recovery() -> Void {
+        healthStore?.recoverActiveWorkoutSession(completion: { session, error in
+            guard let _ = error else {
+                // TODO 恢复失败
+                return
+            }
+            self.session = session
+            self.builder = session?.associatedWorkoutBuilder()
+            self.builder?.dataSource = HKLiveWorkoutDataSource(healthStore: self.healthStore!, workoutConfiguration: session?.workoutConfiguration)
+            session?.delegate = self
+            self.builder?.delegate = self
+            
+            session?.startActivity(with: Date())
+            self.builder?.beginCollection(withStart: Date(), completion: { (success, error) in
+                guard success else {
+                    // TODO Handle errors.
+                    return
+                }
+                // TODO Indicate that the session has started.
+            })
+        })
     }
 }
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		790A7B42264048510074D586 /* Aerobic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790A7B41264048510074D586 /* Aerobic.swift */; };
 		791766BF25F9B536004E662B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791766BE25F9B536004E662B /* AppDelegate.swift */; };
 		791766C125F9B536004E662B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791766C025F9B536004E662B /* SceneDelegate.swift */; };
 		791766C325F9B536004E662B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791766C225F9B536004E662B /* ContentView.swift */; };
@@ -99,6 +100,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		790A7B41264048510074D586 /* Aerobic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Aerobic.swift; sourceTree = "<group>"; };
 		791766BB25F9B536004E662B /* Venus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Venus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		791766BE25F9B536004E662B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		791766C025F9B536004E662B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -179,6 +181,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		790A7B40264048150074D586 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				791766FB25F9B537004E662B /* ContentView.swift */,
+				790A7B41264048510074D586 /* Aerobic.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
 		791766B225F9B536004E662B = {
 			isa = PBXGroup;
 			children = (
@@ -260,10 +271,10 @@
 		791766F825F9B537004E662B /* Venus WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				790A7B40264048150074D586 /* view */,
 				794B3BD7261758D1001B54B4 /* model */,
 				794B3BC42612CA22001B54B4 /* Venus WatchKit Extension.entitlements */,
 				791766F925F9B537004E662B /* HostingController.swift */,
-				791766FB25F9B537004E662B /* ContentView.swift */,
 				791766FD25F9B537004E662B /* ExtensionDelegate.swift */,
 				791766FF25F9B537004E662B /* NotificationController.swift */,
 				7917670125F9B537004E662B /* NotificationView.swift */,
@@ -582,6 +593,7 @@
 				7917670025F9B537004E662B /* NotificationController.swift in Sources */,
 				791766FE25F9B537004E662B /* ExtensionDelegate.swift in Sources */,
 				7917670225F9B537004E662B /* NotificationView.swift in Sources */,
+				790A7B42264048510074D586 /* Aerobic.swift in Sources */,
 				7917670425F9B537004E662B /* ComplicationController.swift in Sources */,
 				794B3BD12614BE13001B54B4 /* HealthManager.swift in Sources */,
 			);
