@@ -40,7 +40,7 @@
 		794112EF25FB59AF008F73AC /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794112EE25FB59AF008F73AC /* FavoriteButton.swift */; };
 		794B3BC32612CA16001B54B4 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 794B3BC22612CA16001B54B4 /* HealthKit.framework */; };
 		794B3BC62612CA22001B54B4 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 794B3BC52612CA22001B54B4 /* HealthKit.framework */; };
-		794B3BD12614BE13001B54B4 /* HealthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794B3BD02614BE13001B54B4 /* HealthManager.swift */; };
+		794B3BD12614BE13001B54B4 /* WorkoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794B3BD02614BE13001B54B4 /* WorkoutManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -144,7 +144,7 @@
 		794B3BC22612CA16001B54B4 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
 		794B3BC42612CA22001B54B4 /* Venus WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Venus WatchKit Extension.entitlements"; sourceTree = "<group>"; };
 		794B3BC52612CA22001B54B4 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS7.2.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
-		794B3BD02614BE13001B54B4 /* HealthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthManager.swift; sourceTree = "<group>"; };
+		794B3BD02614BE13001B54B4 /* WorkoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -283,7 +283,7 @@
 				7917670A25F9B538004E662B /* Info.plist */,
 				7917670B25F9B538004E662B /* PushNotificationPayload.apns */,
 				7917670725F9B538004E662B /* Preview Content */,
-				794B3BD02614BE13001B54B4 /* HealthManager.swift */,
+				794B3BD02614BE13001B54B4 /* WorkoutManager.swift */,
 			);
 			path = "Venus WatchKit Extension";
 			sourceTree = "<group>";
@@ -595,7 +595,7 @@
 				7917670225F9B537004E662B /* NotificationView.swift in Sources */,
 				790A7B42264048510074D586 /* Aerobic.swift in Sources */,
 				7917670425F9B537004E662B /* ComplicationController.swift in Sources */,
-				794B3BD12614BE13001B54B4 /* HealthManager.swift in Sources */,
+				794B3BD12614BE13001B54B4 /* WorkoutManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -760,8 +760,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_ENTITLEMENTS = "Venus WatchKit Extension/Venus WatchKit Extension.entitlements";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_ASSET_PATHS = "\"Venus WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = A5JCEG67BA;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Venus WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -769,8 +771,9 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = SYC.Venus.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lfs.ibreathe.ble.watch.extention;
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE_SPECIFIER = deprecated_watch_extentions;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -784,8 +787,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_ENTITLEMENTS = "Venus WatchKit Extension/Venus WatchKit Extension.entitlements";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_ASSET_PATHS = "\"Venus WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = A5JCEG67BA;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Venus WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -793,8 +798,9 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = SYC.Venus.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lfs.ibreathe.ble.watch.extention;
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE_SPECIFIER = deprecated_watch_extentions;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -810,11 +816,14 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = A5JCEG67BA;
 				IBSC_MODULE = Venus_WatchKit_Extension;
 				INFOPLIST_FILE = "Venus WatchKit App/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = SYC.Venus.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lfs.ibreathe.ble.watch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = deprecated_develop_watch;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -829,11 +838,14 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = A5JCEG67BA;
 				IBSC_MODULE = Venus_WatchKit_Extension;
 				INFOPLIST_FILE = "Venus WatchKit App/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = SYC.Venus.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lfs.ibreathe.ble.watch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = deprecated_develop_watch;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -849,8 +861,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Venus/Venus.entitlements;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_ASSET_PATHS = "\"Venus/Preview Content\"";
+				DEVELOPMENT_TEAM = A5JCEG67BA;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Venus/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
@@ -858,8 +872,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = SYC.Venus;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lfs.ibreathe.ble;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = depreciate_development;
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -872,8 +887,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Venus/Venus.entitlements;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_ASSET_PATHS = "\"Venus/Preview Content\"";
+				DEVELOPMENT_TEAM = A5JCEG67BA;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Venus/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
@@ -881,8 +898,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = SYC.Venus;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lfs.ibreathe.ble;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = depreciate_development;
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

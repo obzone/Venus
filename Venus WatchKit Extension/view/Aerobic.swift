@@ -8,15 +8,15 @@
 import SwiftUI
 
 struct Aerobic: View {
-    @EnvironmentObject var healthManager: HealthManager
+    @EnvironmentObject var workoutManager: WorkoutManager
     
     var body: some View {
-        Text("\(healthManager.heartRate ?? 0)")
+        Text("\(workoutManager.heartRate ?? 0)")
     }
 }
 
 struct Aerobic_Previews: PreviewProvider {
     static var previews: some View {
-        Aerobic().environmentObject(HealthManager.default)
+        Aerobic().environmentObject(WorkoutManager.default)
     }
 }

@@ -11,9 +11,9 @@ import SwiftUI
 import HealthKit
 
 class HostingController: WKHostingController<AnyView> {
-    @StateObject var healthManager = HealthManager.default
+    @StateObject var workoutManager = WorkoutManager.default
     
     override var body: AnyView {
-        return AnyView(ContentView().environmentObject(healthManager))
+        return AnyView(ContentView().environmentObject(workoutManager))
     }
 }

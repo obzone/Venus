@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @EnvironmentObject var healthManager: HealthManager
+    @EnvironmentObject var workoutManager: WorkoutManager
     
     var body: some View {
         NavigationView {
@@ -27,6 +27,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView().environmentObject(HealthManager.default)
+        ContentView().environmentObject(WorkoutManager.default)
     }
 }

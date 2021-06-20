@@ -8,17 +8,17 @@
 import Foundation
 import HealthKit
 
-let DefaultHealthManager = HealthManager.default
+let DefaultHealthManager = WorkoutManager.default
 
-class HealthManager: NSObject, ObservableObject {
+class WorkoutManager: NSObject, ObservableObject {
     
-    static let `default` = HealthManager()
+    static let `default` = WorkoutManager()
     
     let healthStore: HKHealthStore?
     var session: HKWorkoutSession?
     var builder: HKLiveWorkoutBuilder?
     
-    @Published var heartRate: Int?
+    @Published var heartRate: Int? // latest heartrate
     
     override init() {
         if HKHealthStore.isHealthDataAvailable() {
@@ -119,15 +119,30 @@ class HealthManager: NSObject, ObservableObject {
     }
 }
 
-extension HealthManager: HKWorkoutSessionDelegate, HKLiveWorkoutBuilderDelegate {
+extension WorkoutManager: HKWorkoutSessionDelegate {
     func workoutBuilder(_ workoutBuilder: HKLiveWorkoutBuilder, didCollectDataOf collectedTypes: Set<HKSampleType>) {
-        
+        for type in collectedTypes {
+            print(type)
+            guard let quantityType = type as? HKQuantityType else {
+                return // Nothing to do.
+            }
+            
+            // Calculate statistics for the type.
+            let statistics = workoutBuilder.statistics(for: quantityType)
+            
+            
+            DispatchQueue.main.async() {
+                // Update the user interface.
+            }
+        }
     }
     
     func workoutBuilderDidCollectEvent(_ workoutBuilder: HKLiveWorkoutBuilder) {
         
     }
-    
+}
+
+extension WorkoutManager: HKLiveWorkoutBuilderDelegate {
     func workoutSession(_ workoutSession: HKWorkoutSession, didChangeTo toState: HKWorkoutSessionState, from fromState: HKWorkoutSessionState, date: Date) {
         
     }
