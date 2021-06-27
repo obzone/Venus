@@ -11,24 +11,21 @@ struct ContentView: View {
     @EnvironmentObject var workoutManager: WorkoutManager
     
     var body: some View {
-        NavigationView {
-            List {
-                NavigationLink(destination: Aerobic(workoutManager: self.workoutManager)) {
-                    HStack() {
-                        Text("无氧")
-                        Spacer()
-                        Image(systemName: "play")
-                    }
+        List {
+            NavigationLink(destination: Aerobic(workoutManager: self.workoutManager)) {
+                HStack() {
+                    Text("无氧")
+                    Spacer()
+                    Image(systemName: "play")
                 }
-                NavigationLink(destination: Text("Destination")) {
-                    HStack() {
-                        Text("有氧")
-                        Spacer()
-                        Image(systemName: "play")
-                    }
-                }.disabled(true)
             }
-            .navigationTitle("运动类型")
+            NavigationLink(destination: Text("Destination")) {
+                HStack() {
+                    Text("有氧")
+                    Spacer()
+                    Image(systemName: "play")
+                }
+            }.disabled(true)
         }
     }
 }

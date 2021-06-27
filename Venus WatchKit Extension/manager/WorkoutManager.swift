@@ -158,15 +158,15 @@ extension WorkoutManager: HKLiveWorkoutBuilderDelegate {
                 print("statistic \(String(describing: mostRecentQuantity))")
                 if let hr = mostRecentQuantity {
                     DispatchQueue.main.async() { [self] in
-                        let changedHeartrate = self.heartRate - Int(ceil(hr))
+                        let changedHeartrate = self.heartRate - Int(ceil(hr * 60))
                         
                         // call speak when changed heartrate more than 10 or last speak time more than 10 seconds
                         if ((latestSpeakTime?.timeIntervalSince1970 ?? 0) + 10) < Date().timeIntervalSince1970 || (abs(changedHeartrate) > 10) {
-                            DefaultPlayerManager.speak(text: "心率 \(Int(ceil(hr)))")
+                            DefaultPlayerManager.speak(text: "心率 \(Int(ceil(hr * 60)))")
                             latestSpeakTime = Date()
                         }
                         // Update the user interface.
-                        self.heartRate = Int(ceil(hr))
+                        self.heartRate = Int(ceil(hr * 60))
                         
                     }
                 }
