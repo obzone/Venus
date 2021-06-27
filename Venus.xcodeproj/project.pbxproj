@@ -41,6 +41,8 @@
 		794B3BC32612CA16001B54B4 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 794B3BC22612CA16001B54B4 /* HealthKit.framework */; };
 		794B3BC62612CA22001B54B4 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 794B3BC52612CA22001B54B4 /* HealthKit.framework */; };
 		794B3BD12614BE13001B54B4 /* WorkoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794B3BD02614BE13001B54B4 /* WorkoutManager.swift */; };
+		7992ABBD268841C40059E7C0 /* PlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7992ABBC268841C40059E7C0 /* PlayerManager.swift */; };
+		7992ABBF268843320059E7C0 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 7992ABBE268843320059E7C0 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -145,6 +147,8 @@
 		794B3BC42612CA22001B54B4 /* Venus WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Venus WatchKit Extension.entitlements"; sourceTree = "<group>"; };
 		794B3BC52612CA22001B54B4 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS7.2.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
 		794B3BD02614BE13001B54B4 /* WorkoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutManager.swift; sourceTree = "<group>"; };
+		7992ABBC268841C40059E7C0 /* PlayerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerManager.swift; sourceTree = "<group>"; };
+		7992ABBE268843320059E7C0 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -271,6 +275,7 @@
 		791766F825F9B537004E662B /* Venus WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				7992ABBB268841960059E7C0 /* manager */,
 				790A7B40264048150074D586 /* view */,
 				794B3BD7261758D1001B54B4 /* model */,
 				794B3BC42612CA22001B54B4 /* Venus WatchKit Extension.entitlements */,
@@ -283,7 +288,7 @@
 				7917670A25F9B538004E662B /* Info.plist */,
 				7917670B25F9B538004E662B /* PushNotificationPayload.apns */,
 				7917670725F9B538004E662B /* Preview Content */,
-				794B3BD02614BE13001B54B4 /* WorkoutManager.swift */,
+				7992ABBE268843320059E7C0 /* README.md */,
 			);
 			path = "Venus WatchKit Extension";
 			sourceTree = "<group>";
@@ -358,6 +363,15 @@
 			children = (
 			);
 			path = model;
+			sourceTree = "<group>";
+		};
+		7992ABBB268841960059E7C0 /* manager */ = {
+			isa = PBXGroup;
+			children = (
+				794B3BD02614BE13001B54B4 /* WorkoutManager.swift */,
+				7992ABBC268841C40059E7C0 /* PlayerManager.swift */,
+			);
+			path = manager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -541,6 +555,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7992ABBF268843320059E7C0 /* README.md in Resources */,
 				7917670925F9B538004E662B /* Preview Assets.xcassets in Resources */,
 				7917670625F9B538004E662B /* Assets.xcassets in Resources */,
 			);
@@ -593,6 +608,7 @@
 				7917670025F9B537004E662B /* NotificationController.swift in Sources */,
 				791766FE25F9B537004E662B /* ExtensionDelegate.swift in Sources */,
 				7917670225F9B537004E662B /* NotificationView.swift in Sources */,
+				7992ABBD268841C40059E7C0 /* PlayerManager.swift in Sources */,
 				790A7B42264048510074D586 /* Aerobic.swift in Sources */,
 				7917670425F9B537004E662B /* ComplicationController.swift in Sources */,
 				794B3BD12614BE13001B54B4 /* WorkoutManager.swift in Sources */,

@@ -12,13 +12,21 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView {
-            List(["有氧", "无氧"], id: \.self) { item in
-                NavigationLink(
-                    destination: Text("Destination")) {
-                    VStack {
-                        Text(item)
+            List {
+                NavigationLink(destination: Aerobic(workoutManager: self.workoutManager)) {
+                    HStack() {
+                        Text("无氧")
+                        Spacer()
+                        Image(systemName: "play")
                     }
                 }
+                NavigationLink(destination: Text("Destination")) {
+                    HStack() {
+                        Text("有氧")
+                        Spacer()
+                        Image(systemName: "play")
+                    }
+                }.disabled(true)
             }
             .navigationTitle("运动类型")
         }

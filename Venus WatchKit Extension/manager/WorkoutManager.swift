@@ -18,7 +18,11 @@ class WorkoutManager: NSObject, ObservableObject {
     var session: HKWorkoutSession?
     var builder: HKLiveWorkoutBuilder?
     
-    @Published var heartRate: Int? // latest heartrate
+    var latestSpeakTime: Date?
+    
+    @Published var heartRate: Int = 0 // latest heartrate
+    
+    @Published var state: HKWorkoutSessionState = HKWorkoutSessionState.notStarted
     
     override init() {
         if HKHealthStore.isHealthDataAvailable() {
@@ -62,10 +66,12 @@ class WorkoutManager: NSObject, ObservableObject {
             session?.startActivity(with: Date())
             builder?.beginCollection(withStart: Date(), completion: { (success, error) in
                 guard success else {
+                    print("-- start workoutSession error \(String(describing: error))")
                     // TODO Handle errors.
                     return
                 }
                 // TODO Indicate that the session has started.
+                print("-- start workouSession success")
             })
         } catch {
             return
@@ -73,6 +79,7 @@ class WorkoutManager: NSObject, ObservableObject {
     }
     
     func stopSession() -> Void {
+        if session?.state != .stopped && session?.state != .running  {return}
         session?.end()
         builder?.endCollection(withEnd: Date()) { (success, error) in
             
@@ -90,8 +97,21 @@ class WorkoutManager: NSObject, ObservableObject {
                 
                 DispatchQueue.main.async() {
                     // Update the user interface.
+                    // TODO notificate user workout is stopped
                 }
             }
+        }
+    }
+    
+    func pause() -> Void {
+        if session?.state == .running {
+            session?.pause()
+        }
+    }
+    
+    func resume() -> Void {
+        if session?.state == .paused {
+            session?.resume()
         }
     }
     
@@ -111,15 +131,17 @@ class WorkoutManager: NSObject, ObservableObject {
             self.builder?.beginCollection(withStart: Date(), completion: { (success, error) in
                 guard success else {
                     // TODO Handle errors.
+                    print("-- recovery workoutSession error \(String(describing: error))")
                     return
                 }
                 // TODO Indicate that the session has started.
+                print("-- recovery workoutSession success")
             })
         })
     }
 }
 
-extension WorkoutManager: HKWorkoutSessionDelegate {
+extension WorkoutManager: HKLiveWorkoutBuilderDelegate {
     func workoutBuilder(_ workoutBuilder: HKLiveWorkoutBuilder, didCollectDataOf collectedTypes: Set<HKSampleType>) {
         for type in collectedTypes {
             print(type)
@@ -131,27 +153,47 @@ extension WorkoutManager: HKWorkoutSessionDelegate {
             let statistics = workoutBuilder.statistics(for: quantityType)
             
             
-            DispatchQueue.main.async() {
-                // Update the user interface.
+            if quantityType == HKQuantityType.quantityType(forIdentifier: HKQuantityTypeIdentifier.heartRate) {
+                let mostRecentQuantity = statistics?.mostRecentQuantity()?.doubleValue(for: HKUnit.hertz())
+                print("statistic \(String(describing: mostRecentQuantity))")
+                if let hr = mostRecentQuantity {
+                    DispatchQueue.main.async() { [self] in
+                        let changedHeartrate = self.heartRate - Int(ceil(hr))
+                        
+                        // call speak when changed heartrate more than 10 or last speak time more than 10 seconds
+                        if ((latestSpeakTime?.timeIntervalSince1970 ?? 0) + 10) < Date().timeIntervalSince1970 || (abs(changedHeartrate) > 10) {
+                            DefaultPlayerManager.speak(text: "心率 \(Int(ceil(hr)))")
+                            latestSpeakTime = Date()
+                        }
+                        // Update the user interface.
+                        self.heartRate = Int(ceil(hr))
+                        
+                    }
+                }
             }
+            
         }
     }
     
     func workoutBuilderDidCollectEvent(_ workoutBuilder: HKLiveWorkoutBuilder) {
-        
+        let lastEvent = workoutBuilder.workoutEvents.last
+        print("-- workoutBuilder collect Event \(String(describing: lastEvent))")
     }
 }
 
-extension WorkoutManager: HKLiveWorkoutBuilderDelegate {
+extension WorkoutManager: HKWorkoutSessionDelegate  {
     func workoutSession(_ workoutSession: HKWorkoutSession, didChangeTo toState: HKWorkoutSessionState, from fromState: HKWorkoutSessionState, date: Date) {
-        
+        print("-- workoutSession change state from \(fromState.rawValue) to \(toState.rawValue)")
+        DispatchQueue.main.async { [self] in
+            state = toState
+        }
     }
     
     func workoutSession(_ workoutSession: HKWorkoutSession, didFailWithError error: Error) {
-        
+        print("-- workoutSession didFailWithError \(error)")
     }
     
     func workoutSession(_ workoutSession: HKWorkoutSession, didGenerate event: HKWorkoutEvent) {
-        
+        print("-- workoutSession didGenerate event \(event)")
     }
 }

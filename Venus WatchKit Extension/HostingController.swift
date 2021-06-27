@@ -11,9 +11,10 @@ import SwiftUI
 import HealthKit
 
 class HostingController: WKHostingController<AnyView> {
-    @StateObject var workoutManager = WorkoutManager.default
+    var workoutManager = WorkoutManager.default
     
     override var body: AnyView {
-        return AnyView(ContentView().environmentObject(workoutManager))
+        print("-- recreate app")
+        return AnyView(ContentView().environmentObject(self.workoutManager))
     }
 }
