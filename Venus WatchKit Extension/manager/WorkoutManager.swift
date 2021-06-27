@@ -35,7 +35,8 @@ class WorkoutManager: NSObject, ObservableObject {
             let typesToRead: Set = [
                 HKQuantityType.quantityType(forIdentifier: .heartRate)!,
                 HKQuantityType.quantityType(forIdentifier: .activeEnergyBurned)!,
-                HKQuantityType.quantityType(forIdentifier: .distanceWalkingRunning)!
+                HKQuantityType.quantityType(forIdentifier: .distanceWalkingRunning)!,
+                HKQuantityType.quantityType(forIdentifier: .oxygenSaturation)!,
             ]
 
             // Request authorization for those quantity types.
@@ -112,6 +113,7 @@ class WorkoutManager: NSObject, ObservableObject {
     func resume() -> Void {
         if session?.state == .paused {
             session?.resume()
+            DefaultPlayerManager.setupSession()
         }
     }
     

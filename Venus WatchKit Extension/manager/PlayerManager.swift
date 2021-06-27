@@ -21,6 +21,12 @@ class PlayerManager: NSObject, ObservableObject {
 
     
     override init() {
+        super.init()
+        
+        self.setupSession()
+    }
+    
+    func setupSession() -> Void {
         // Set up the session.
         let session = AVAudioSession.sharedInstance()
 
