@@ -161,7 +161,7 @@ extension WorkoutManager: HKLiveWorkoutBuilderDelegate {
                         let changedHeartrate = self.heartRate - Int(ceil(hr * 60))
                         
                         // call speak when changed heartrate more than 10 or last speak time more than 10 seconds
-                        if ((latestSpeakTime?.timeIntervalSince1970 ?? 0) + 10) < Date().timeIntervalSince1970 || (abs(changedHeartrate) > 10) {
+                        if (((latestSpeakTime?.timeIntervalSince1970 ?? 0) + 10) < Date().timeIntervalSince1970 || (abs(changedHeartrate) > 10)) && session?.state == .running {
                             DefaultPlayerManager.speak(text: "心率 \(Int(ceil(hr * 60)))")
                             latestSpeakTime = Date()
                         }

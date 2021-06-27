@@ -10,6 +10,10 @@ import HealthKit
 
 struct Aerobic: View {
     @ObservedObject var workoutManager: WorkoutManager
+    @State var isAtMaxScale = false
+    
+    private let animation = Animation.easeInOut(duration: 1).repeatForever(autoreverses: true)
+    private let maxScale: CGFloat = 1.1
     
     var body: some View {
         ZStack {
@@ -17,6 +21,7 @@ struct Aerobic: View {
                 .foregroundColor(.red)
                 .font(.system(size: 50))
                 .offset(x: 0, y: -10.0)
+                .scaleEffect(isAtMaxScale ? maxScale : 1)
             
             Text("\(workoutManager.heartRate)")
                 .foregroundColor(.white)
@@ -33,15 +38,21 @@ struct Aerobic: View {
                             workoutManager.resume()
                         }
                     }, label: {
-                        Image(systemName: workoutManager.state == .running ? "pause" : (workoutManager.state == .paused) ? "play" : "pause")
+                        Image(systemName: workoutManager.state == .running ? "speaker" : (workoutManager.state == .paused) ? "speaker.slash" : "speaker")
                     })
                     .disabled(workoutManager.state != .running && workoutManager.state != .paused)
                     
                     Button(action: {
                         if workoutManager.state == .notStarted || workoutManager.state == .ended {
                             workoutManager.startSession(activityType: .coreTraining, locationType: .indoor)
+                            withAnimation (Animation.easeOut(duration: 1).repeatForever(autoreverses: true)) {
+                                isAtMaxScale = true
+                            }
                         } else if workoutManager.state == .running || workoutManager.state == .paused {
                             workoutManager.stopSession()
+                            withAnimation (Animation.easeOut(duration: 1)) {
+                                isAtMaxScale = false
+                            }
                         }
                     }, label: {
                         Image(systemName: workoutManager.state == .running ? "stop" : (workoutManager.state == .stopped || workoutManager.state == .notStarted || workoutManager.state == .ended) ? "play" : "stop" )

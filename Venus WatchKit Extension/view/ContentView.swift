@@ -16,14 +16,14 @@ struct ContentView: View {
                 HStack() {
                     Text("无氧")
                     Spacer()
-                    Image(systemName: "play")
+                    Image(systemName: "chevron.right.circle")
                 }
             }
             NavigationLink(destination: Text("Destination")) {
                 HStack() {
                     Text("有氧")
                     Spacer()
-                    Image(systemName: "play")
+                    Image(systemName: "chevron.right.circle")
                 }
             }.disabled(true)
         }
