@@ -12,14 +12,14 @@ struct ContentView: View {
     
     var body: some View {
         List {
-            NavigationLink(destination: Aerobic(workoutManager: self.workoutManager)) {
+            NavigationLink(destination: Anaerobic(workoutManager: self.workoutManager)) {
                 HStack() {
                     Text("无氧")
                     Spacer()
                     Image(systemName: "chevron.right.circle")
                 }
             }
-            NavigationLink(destination: Text("Destination")) {
+            NavigationLink(destination: Aerobic(workoutManager: self.workoutManager)) {
                 HStack() {
                     Text("有氧")
                     Spacer()

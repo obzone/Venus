@@ -8,7 +8,7 @@
 import Foundation
 import HealthKit
 
-let DefaultHealthManager = WorkoutManager.default
+let DefaultWorkoutManager = WorkoutManager.default
 
 class WorkoutManager: NSObject, ObservableObject {
     

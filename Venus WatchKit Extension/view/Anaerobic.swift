@@ -1,14 +1,13 @@
 //
-//  Aerobic.swift
+//  Anaerobic.swift
 //  Venus WatchKit Extension
 //
-//  Created by 邵业程 on 2021/5/3.
+//  Created by 邵业程 on 2021/6/29.
 //
 
 import SwiftUI
-import HealthKit
 
-struct Aerobic: View {
+struct Anaerobic: View {
     @ObservedObject var workoutManager: WorkoutManager
     @State var isAtMaxScale = false
     
@@ -65,8 +64,8 @@ struct Aerobic: View {
     }
 }
 
-struct Aerobic_Previews: PreviewProvider {
+struct Anaerobic_Previews: PreviewProvider {
     static var previews: some View {
-        Aerobic(workoutManager: DefaultWorkoutManager)
+        Anaerobic(workoutManager: DefaultWorkoutManager)
     }
 }

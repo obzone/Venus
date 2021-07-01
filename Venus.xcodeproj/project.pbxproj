@@ -43,6 +43,7 @@
 		794B3BD12614BE13001B54B4 /* WorkoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794B3BD02614BE13001B54B4 /* WorkoutManager.swift */; };
 		7992ABBD268841C40059E7C0 /* PlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7992ABBC268841C40059E7C0 /* PlayerManager.swift */; };
 		7992ABBF268843320059E7C0 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 7992ABBE268843320059E7C0 /* README.md */; };
+		7992ABC1268AB8E10059E7C0 /* Anaerobic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7992ABC0268AB8E10059E7C0 /* Anaerobic.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -149,6 +150,7 @@
 		794B3BD02614BE13001B54B4 /* WorkoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutManager.swift; sourceTree = "<group>"; };
 		7992ABBC268841C40059E7C0 /* PlayerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerManager.swift; sourceTree = "<group>"; };
 		7992ABBE268843320059E7C0 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		7992ABC0268AB8E10059E7C0 /* Anaerobic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Anaerobic.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +192,7 @@
 			children = (
 				791766FB25F9B537004E662B /* ContentView.swift */,
 				790A7B41264048510074D586 /* Aerobic.swift */,
+				7992ABC0268AB8E10059E7C0 /* Anaerobic.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -609,6 +612,7 @@
 				791766FE25F9B537004E662B /* ExtensionDelegate.swift in Sources */,
 				7917670225F9B537004E662B /* NotificationView.swift in Sources */,
 				7992ABBD268841C40059E7C0 /* PlayerManager.swift in Sources */,
+				7992ABC1268AB8E10059E7C0 /* Anaerobic.swift in Sources */,
 				790A7B42264048510074D586 /* Aerobic.swift in Sources */,
 				7917670425F9B537004E662B /* ComplicationController.swift in Sources */,
 				794B3BD12614BE13001B54B4 /* WorkoutManager.swift in Sources */,
