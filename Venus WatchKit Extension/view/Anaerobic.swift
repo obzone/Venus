@@ -44,12 +44,12 @@ struct Anaerobic: View {
                     Button(action: {
                         if workoutManager.state == .notStarted || workoutManager.state == .ended {
                             workoutManager.startSession(activityType: .coreTraining, locationType: .indoor)
-                            withAnimation (Animation.easeOut(duration: 1).repeatForever(autoreverses: true)) {
+                            withAnimation (Animation.easeOut(duration: 0.25).repeatForever(autoreverses: true)) {
                                 isAtMaxScale = true
                             }
                         } else if workoutManager.state == .running || workoutManager.state == .paused {
                             workoutManager.stopSession()
-                            withAnimation (Animation.easeOut(duration: 1)) {
+                            withAnimation (Animation.easeOut(duration: 0.25)) {
                                 isAtMaxScale = false
                             }
                         }
